@@ -33,6 +33,10 @@
     margin-top: 100px;
     justify-content: center;
   }
+  area{
+    width:400px; 
+    height: 400px;
+  }
   
 </style>
 
@@ -50,7 +54,7 @@
 	    <input type="number" id="numero1" placeholder="ingrese un numero" #numero > 
 	  </p>
 	  <p>
-	    <textarea style="width:400px; height: 400px;" id="resultado" [(ngModel)]="resultado"   readonly></textarea> 
+	    <textarea class="area" readonly>{{resultado}}</textarea> 
 	  </p>
 	  <p>
 	    <input type="button" id="boton" value="Ejecutar" (click)="ejecutar(numero.value)">
