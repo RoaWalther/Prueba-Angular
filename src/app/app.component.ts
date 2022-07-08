@@ -9,21 +9,21 @@ export class AppComponent {
   title = 'prueba';
   public numero: number;
   public resultado ='';
+  public miarray;
   
   services: any;
 
-  public ejecutar(inputValue:number){
+ public ejecutar(inputValue:number){
     this.numero = inputValue;
-    let miarray = Array.from({length: this.numero}, () => Math.floor(Math.random() * 10));
-    let sms = 'numeros aleatorios: '+miarray;
-    alert(sms);
-    var ordenados = miarray.sort( function deMayorAMenor(elem1, elem2) {return elem1-elem2;});
-    this.imprimir(ordenados);
+    this.miarray = Array.from({length: this.numero}, () => Math.floor(Math.random() * 100));
+    let sms = 'numeros aleatorios: '+this.miarray+"\n";
+    let ordenados = this.miarray.sort( function deMayorAMenor(elem1, elem2) {return elem1-elem2;});
+    let total = sms+ 'numeros ordenados: '+ ordenados;
+    this.imprimir(total);
   }
   imprimir(valor){
-    let sms= 'numeros ordenados: '+ valor;
-    alert(sms);
-    this.resultado.includes(sms);
+    alert(valor);
+    this.resultado=valor;
   }
 
 }
