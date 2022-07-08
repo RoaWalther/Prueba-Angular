@@ -17,7 +17,7 @@ export class AppComponent {
     this.numero = inputValue;
     this.miarray = Array.from({length: this.numero}, () => Math.floor(Math.random() * 100));
     let sms = 'numeros aleatorios: '+this.miarray+"\n";
-    let ordenados = this.miarray.sort( function deMayorAMenor(elem1, elem2) {return elem1-elem2;});
+    let ordenados = this.miarray.sort( function ordenar(elem1, elem2) {return elem1-elem2;});
     let total = sms+ 'numeros ordenados: '+ ordenados;
     this.imprimir(total);
   }
